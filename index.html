@@ -140,18 +140,25 @@ radial-gradient(circle at 35% 30%,#fff4d6,#e1ad62 43%,#8e5627 100%);box-shadow:0
 }
 
 </style>
-<style id="final-page23-fix">
-/* GİRİŞ: açılışta beyaz kare oluşmasın */
+<style id="final-page23-fix-v2">
+/* =========================================================
+   SADECE 2. ve 3. SAYFA DÜZELTMESİ
+   - Giriş ve diğer sayfalara dokunma
+   - Başlık daha estetik
+   - Başlık kutusu yukarı alındı / küçültüldü
+   - İlk ürün satırına binmez
+   - 3. sayfadaki sol üst beyaz kare kaldırıldı
+   ========================================================= */
+
+/* Girişte daha önce görülen beyaz flaş/kare oluşmasın */
 .home::before,
 .page[data-title="Giriş"]::before{
   content:none!important;
   display:none!important;
 }
-.home .enterGlow{
-  display:none!important;
-}
+.home .enterGlow{display:none!important;}
 
-/* 2 ve 3. sayfalar */
+/* 2 ve 3. sayfa */
 .final-pasta-page{
   margin:0!important;
   padding:0!important;
@@ -173,62 +180,68 @@ radial-gradient(circle at 35% 30%,#fff4d6,#e1ad62 43%,#8e5627 100%);box-shadow:0
   padding:0;
 }
 
-/* Eski MAKARNALAR I / III başlığını tamamen kapatır.
-   Siyah kutu yok; krem zemin + tek HTML başlık. */
+/* MAKARNALAR başlığının arka alanı:
+   eski roman rakamlarını kapatır, fakat ilk ürüne taşmaz */
 .final-title-overlay{
   position:absolute;
   z-index:20;
-  left:7%;
-  right:7%;
-  top:24.4%;
-  height:9.2%;
-  background:
-    linear-gradient(90deg,
-      rgba(246,238,226,.98) 0%,
-      rgba(250,244,235,1) 35%,
-      rgba(250,244,235,1) 65%,
-      rgba(246,238,226,.98) 100%);
+  left:8%;
+  right:8%;
+  top:25.05%;
+  height:6.25%;
+  background:rgba(249,243,233,.97);
   display:flex;
   align-items:center;
   justify-content:center;
   pointer-events:none;
+  box-shadow:none!important;
+  border:0!important;
 }
+
+/* Daha karakterli, logodaki klasik hissiyata yakın başlık */
 .final-title-overlay span{
   position:relative;
   color:#111;
-  font-family:Impact,"Arial Narrow",Arial,sans-serif;
+  font-family:Georgia,"Times New Roman",serif;
   font-weight:900;
-  font-size:clamp(38px,8.4vw,72px);
-  line-height:1;
-  letter-spacing:-1px;
+  font-size:clamp(37px,7.9vw,68px);
+  letter-spacing:-1.8px;
+  line-height:.92;
+  transform:scaleX(.93);
+  text-shadow:0 1px 0 rgba(0,0,0,.04);
+  white-space:nowrap;
 }
+
+/* İnce dekoratif kırmızı çizgi; ilk üründen güvenli mesafede */
 .final-title-overlay span::after{
   content:"";
   position:absolute;
   left:50%;
   transform:translateX(-50%);
-  bottom:-12px;
-  width:72px;
+  bottom:-11px;
+  width:86px;
   height:4px;
   border-radius:4px;
   background:#d82f1f;
 }
 
-/* 3. sayfadaki 03/06 alanı.
-   Saat Kulesi ve logo alanına dokunmaz. */
+/* 3. sayfadaki eski 03/06 alanını kapatan blok:
+   önceki beyaz kare görünümünü engellemek için daha dar,
+   krem tonlu ve sadece köşede */
 .final-page-number-cover{
   position:absolute;
   z-index:21;
   left:0;
   top:0;
-  width:14.2%;
-  height:9.6%;
-  background:
-    linear-gradient(135deg,#f6eee2 0%,#fbf6ed 100%);
+  width:11.5%;
+  height:7.9%;
+  background:linear-gradient(135deg,#f3eadc 0%,#f8f1e7 55%,#f4ecdf 100%);
   pointer-events:none;
+  border:0!important;
+  box-shadow:none!important;
 }
 
-/* Görsellerin kendi alt menüsü kullanılacak */
+/* 2-3. sayfada görselin kendi footer menüsü */
 body.final-pasta-active #nav{
   display:none!important;
 }
@@ -267,8 +280,19 @@ body.final-pasta-active #nav{
     width:100vw!important;
     max-width:none!important;
   }
+  .final-title-overlay{
+    top:25.0%;
+    height:6.15%;
+    left:7.2%;
+    right:7.2%;
+  }
   .final-title-overlay span{
-    font-size:10.6vw!important;
+    font-size:9.5vw!important;
+    letter-spacing:-1.2px;
+  }
+  .final-page-number-cover{
+    width:11.2%;
+    height:7.7%;
   }
 }
 </style></head>
