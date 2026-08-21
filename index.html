@@ -140,8 +140,29 @@ radial-gradient(circle at 35% 30%,#fff4d6,#e1ad62 43%,#8e5627 100%);box-shadow:0
 }
 
 </style>
-<style id="clean-pasta-page-lock">
-/* 2. ve 3. sayfa: eski başlık resmi artık kullanılmıyor */
+<style id="clean-pasta-page-lock-v2">
+/* =========================================================
+   SADECE İSTENEN 3 DÜZELTME
+   1) Girişte beyaz kare / anlık flaş yok
+   2) MAKARNALAR başlığı ilk ürüne binmez
+   3) 2. ve 3. sayfada başlık kutusu hissi kaldırıldı
+   ========================================================= */
+
+/* GİRİŞ SAYFASI: eski sol-üst kapatma katmanını kesin kapat */
+.home::before,
+.page.home::before,
+.page[data-title="Giriş"]::before{
+  content:none!important;
+  display:none!important;
+  width:0!important;
+  height:0!important;
+  background:transparent!important;
+}
+.home .enterGlow{
+  display:none!important;
+}
+
+/* 2. ve 3. sayfalar */
 .clean-pasta-page{
   margin:0!important;
   padding:0!important;
@@ -149,42 +170,61 @@ radial-gradient(circle at 35% 30%,#fff4d6,#e1ad62 43%,#8e5627 100%);box-shadow:0
   background:#f7efe4!important;
   overflow-x:hidden!important;
 }
-.clean-pasta-header,
-.clean-pasta-body{
+.clean-pasta-header{
   display:block;
   width:100%;
   height:auto;
-  margin:0;
-  padding:0;
+  margin:0!important;
+  padding:0!important;
 }
+
+/* Başlık artık kutu değil, doğrudan krem zeminde yazı */
 .clean-pasta-title{
-  background:#f7efe4;
+  background:#f7efe4!important;
   text-align:center;
-  padding:14px 10px 16px;
+  padding:8px 10px 30px!important;
+  margin:0!important;
+  border:0!important;
+  box-shadow:none!important;
   position:relative;
   z-index:2;
 }
 .clean-pasta-title-text{
-  color:#151310;
-  font-family:Georgia,"Times New Roman",serif;
-  font-weight:900;
-  font-size:clamp(36px,8.8vw,70px);
-  line-height:1;
-  letter-spacing:-2px;
-  white-space:nowrap;
+  color:#151310!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-weight:900!important;
+  font-size:clamp(34px,8.4vw,66px)!important;
+  line-height:1!important;
+  letter-spacing:-1.6px!important;
+  white-space:nowrap!important;
+  margin:0!important;
+  padding:0!important;
 }
 .clean-pasta-title-deco{
-  width:84px;
-  height:4px;
-  border-radius:4px;
-  background:#d82f1f;
-  margin:11px auto 0;
+  width:76px!important;
+  height:3px!important;
+  border-radius:4px!important;
+  background:#d82f1f!important;
+  margin:10px auto 0!important;
 }
+
+/* Ürün listesi başlıktan SONRA başlar; üstüne binme ihtimali sıfır */
 .clean-pasta-body-wrap{
   position:relative;
   width:100%;
-  margin:0;
+  margin:0!important;
+  padding:0!important;
+  background:#f7efe4!important;
 }
+.clean-pasta-body{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0!important;
+  padding:0!important;
+}
+
+/* Görsel footer üzerindeki tıklama bölgeleri */
 .clean-pasta-hotspot{
   position:absolute;
   z-index:30;
@@ -213,7 +253,7 @@ radial-gradient(circle at 35% 30%,#fff4d6,#e1ad62 43%,#8e5627 100%);box-shadow:0
 .p3-salad{left:71%;width:18%}
 .p3-next{right:0;width:11%}
 
-/* Bu iki sayfada ayrıca eski sabit alt bar görünmez */
+/* 2 ve 3. sayfada eski sabit alt bar görünmesin */
 body.clean-pasta-active #nav{
   display:none!important;
 }
@@ -226,11 +266,14 @@ body.clean-pasta-active #nav{
     max-width:none!important;
   }
   .clean-pasta-title{
-    padding:12px 8px 14px;
+    padding:6px 8px 34px!important;
   }
   .clean-pasta-title-text{
-    font-size:10.4vw!important;
-    letter-spacing:-1.4px;
+    font-size:9.6vw!important;
+    letter-spacing:-1.1px!important;
+  }
+  .clean-pasta-title-deco{
+    margin-top:8px!important;
   }
 }
 </style></head>
