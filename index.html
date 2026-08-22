@@ -271,58 +271,62 @@ body.clean-pasta-active #nav{
     margin-top:6px!important;
   }
 }
-</style><style id="makarnalar-only-frame-fix">
-/* === SADECE 2. ve 3. SAYFA MAKARNALAR BAŞLIĞI === */
+</style><style id="makarnalar-no-frame-final">
+/* SADECE 2. VE 3. SAYFA — ÇERÇEVE/BANT TAMAMEN KALDIRILDI */
 .clean-pasta-page-2 .clean-pasta-title,
 .clean-pasta-page-3 .clean-pasta-title{
+  position:relative !important;
+  z-index:2 !important;
+  display:block !important;
+
+  /* ÇERÇEVE/BANT YOK */
   background:transparent !important;
   border:0 !important;
-  box-shadow:none !important;
   outline:0 !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+
+  /* SADECE YAZININ KENDİ YÜKSEKLİĞİ KALSIN */
   margin:0 !important;
-  padding:8px 0 10px !important;
-  height:auto !important;
+  padding:0 !important;
   min-height:0 !important;
+  height:auto !important;
+
+  text-align:center !important;
   overflow:visible !important;
+  transform:none !important;
+  top:auto !important;
+  bottom:auto !important;
 }
 
 .clean-pasta-page-2 .clean-pasta-title-text,
 .clean-pasta-page-3 .clean-pasta-title-text{
+  display:block !important;
   margin:0 !important;
   padding:0 !important;
   background:transparent !important;
   border:0 !important;
+  outline:0 !important;
   box-shadow:none !important;
+  line-height:1 !important;
+  color:#151310 !important;
 }
 
-/* Başlığın altındaki dekoratif çizgiyi de kaldır:
-   sadece MAKARNALAR yazısı kalsın. */
+/* KIRMIZI DEKORATİF ÇİZGİ DE YOK — SADECE SİYAH MAKARNALAR */
 .clean-pasta-page-2 .clean-pasta-title-deco,
 .clean-pasta-page-3 .clean-pasta-title-deco{
   display:none !important;
+  width:0 !important;
+  height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
 }
 
-/* Ürün alanına kesinlikle müdahale yok */
-</style><style id="makarnalar-frame-up-final">
-/* SADECE 2. ve 3. SAYFA:
-   MAKARNALAR yazısı + krem başlık alanı birlikte 3.5 mm yukarı */
-.clean-pasta-page-2 .clean-pasta-title,
-.clean-pasta-page-3 .clean-pasta-title{
-  position:relative !important;
-  top:-3.5mm !important;
-  transform:none !important;
-}
-
-/* Başlığın kendi krem zemini mutlaka blokla beraber taşınsın */
-.clean-pasta-page-2 .clean-pasta-title,
-.clean-pasta-page-3 .clean-pasta-title{
-  background:#f7efe4 !important;
-}
-
-/* Ürün alanına dokunma */
+/* ÜRÜN ALANINA DOKUNMA */
 .clean-pasta-page-2 .clean-pasta-body-wrap,
 .clean-pasta-page-3 .clean-pasta-body-wrap{
-  position:relative !important;
+  margin-top:0 !important;
+  padding-top:0 !important;
 }
 </style></head>
 <body>
