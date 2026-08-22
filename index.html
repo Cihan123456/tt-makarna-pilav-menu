@@ -271,34 +271,24 @@ body.clean-pasta-active #nav{
     margin-top:6px!important;
   }
 }
-</style><style id="makarnalar-no-frame-final">
-/* SADECE 2. VE 3. SAYFA — ÇERÇEVE/BANT TAMAMEN KALDIRILDI */
+</style><style id="makarnalar-final-tidy">
+/* SADECE 2. VE 3. SAYFA MAKARNALAR BAŞLIĞI */
 .clean-pasta-page-2 .clean-pasta-title,
 .clean-pasta-page-3 .clean-pasta-title{
-  position:relative !important;
-  z-index:2 !important;
-  display:block !important;
-
-  /* ÇERÇEVE/BANT YOK */
   background:transparent !important;
   border:0 !important;
   outline:0 !important;
   box-shadow:none !important;
   border-radius:0 !important;
-
-  /* SADECE YAZININ KENDİ YÜKSEKLİĞİ KALSIN */
   margin:0 !important;
-  padding:0 !important;
+  padding:0 0 9px !important;
   min-height:0 !important;
   height:auto !important;
-
   text-align:center !important;
   overflow:visible !important;
-  transform:none !important;
-  top:auto !important;
-  bottom:auto !important;
 }
 
+/* Başlık bir tık büyük */
 .clean-pasta-page-2 .clean-pasta-title-text,
 .clean-pasta-page-3 .clean-pasta-title-text{
   display:block !important;
@@ -308,25 +298,44 @@ body.clean-pasta-active #nav{
   border:0 !important;
   outline:0 !important;
   box-shadow:none !important;
-  line-height:1 !important;
   color:#151310 !important;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-weight:900 !important;
+  font-size:8.4vw !important;
+  line-height:1 !important;
+  letter-spacing:-0.8px !important;
+  white-space:nowrap !important;
 }
 
-/* KIRMIZI DEKORATİF ÇİZGİ DE YOK — SADECE SİYAH MAKARNALAR */
+/* 2. sayfadaki kırmızı kalan dekor dahil tüm dekoru kaldır */
 .clean-pasta-page-2 .clean-pasta-title-deco,
-.clean-pasta-page-3 .clean-pasta-title-deco{
+.clean-pasta-page-3 .clean-pasta-title-deco,
+.clean-pasta-page-2 .clean-pasta-title::before,
+.clean-pasta-page-2 .clean-pasta-title::after,
+.clean-pasta-page-3 .clean-pasta-title::before,
+.clean-pasta-page-3 .clean-pasta-title::after{
+  content:none !important;
   display:none !important;
   width:0 !important;
   height:0 !important;
   margin:0 !important;
   padding:0 !important;
+  background:none !important;
+  border:0 !important;
 }
 
-/* ÜRÜN ALANINA DOKUNMA */
+/* Başlık ile ilk ürün arasında eşit küçük boşluk */
 .clean-pasta-page-2 .clean-pasta-body-wrap,
 .clean-pasta-page-3 .clean-pasta-body-wrap{
-  margin-top:0 !important;
+  margin-top:4px !important;
   padding-top:0 !important;
+}
+
+@media(min-width:700px){
+  .clean-pasta-page-2 .clean-pasta-title-text,
+  .clean-pasta-page-3 .clean-pasta-title-text{
+    font-size:54px !important;
+  }
 }
 </style></head>
 <body>
