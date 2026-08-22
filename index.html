@@ -303,10 +303,26 @@ body.clean-pasta-active #nav{
 }
 
 /* Ürün alanına kesinlikle müdahale yok */
-</style><style id="makarnalar-35mm-up-only">
+</style><style id="makarnalar-frame-up-final">
+/* SADECE 2. ve 3. SAYFA:
+   MAKARNALAR yazısı + krem başlık alanı birlikte 3.5 mm yukarı */
 .clean-pasta-page-2 .clean-pasta-title,
 .clean-pasta-page-3 .clean-pasta-title{
-    transform: translateY(-3.5mm) !important;
+  position:relative !important;
+  top:-3.5mm !important;
+  transform:none !important;
+}
+
+/* Başlığın kendi krem zemini mutlaka blokla beraber taşınsın */
+.clean-pasta-page-2 .clean-pasta-title,
+.clean-pasta-page-3 .clean-pasta-title{
+  background:#f7efe4 !important;
+}
+
+/* Ürün alanına dokunma */
+.clean-pasta-page-2 .clean-pasta-body-wrap,
+.clean-pasta-page-3 .clean-pasta-body-wrap{
+  position:relative !important;
 }
 </style></head>
 <body>
