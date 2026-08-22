@@ -271,43 +271,59 @@ body.clean-pasta-active #nav{
     margin-top:6px!important;
   }
 }
-</style><style id="makarnalar-final-tidy">
-/* SADECE 2. VE 3. SAYFA MAKARNALAR BAŞLIĞI */
+</style><style id="makarnalar-reference-spacing-fix">
+/* =========================================================
+   SADECE 2. VE 3. SAYFA:
+   Referanstaki gibi başlık + ilk ürün ilişkisi
+   ========================================================= */
+
+/* Ayrı krem kutu/bant görüntüsü yok */
 .clean-pasta-page-2 .clean-pasta-title,
 .clean-pasta-page-3 .clean-pasta-title{
+  display:block !important;
+  position:relative !important;
+  z-index:2 !important;
+
   background:transparent !important;
   border:0 !important;
   outline:0 !important;
   box-shadow:none !important;
   border-radius:0 !important;
+
   margin:0 !important;
-  padding:0 0 9px !important;
+  padding:10px 0 12px !important;
   min-height:0 !important;
   height:auto !important;
+
   text-align:center !important;
   overflow:visible !important;
+  transform:none !important;
+  top:auto !important;
+  bottom:auto !important;
 }
 
-/* Başlık bir tık büyük */
+/* Sadece siyah MAKARNALAR yazısı */
 .clean-pasta-page-2 .clean-pasta-title-text,
 .clean-pasta-page-3 .clean-pasta-title-text{
   display:block !important;
   margin:0 !important;
   padding:0 !important;
+
   background:transparent !important;
   border:0 !important;
   outline:0 !important;
   box-shadow:none !important;
+
   color:#151310 !important;
   font-family:Georgia,"Times New Roman",serif !important;
   font-weight:900 !important;
-  font-size:8.4vw !important;
+  font-size:8.8vw !important;
   line-height:1 !important;
-  letter-spacing:-0.8px !important;
+  letter-spacing:-0.9px !important;
   white-space:nowrap !important;
 }
 
-/* 2. sayfadaki kırmızı kalan dekor dahil tüm dekoru kaldır */
+/* Eski kırmızı çizgi / süs kalıntıları tamamen kapalı */
 .clean-pasta-page-2 .clean-pasta-title-deco,
 .clean-pasta-page-3 .clean-pasta-title-deco,
 .clean-pasta-page-2 .clean-pasta-title::before,
@@ -324,17 +340,40 @@ body.clean-pasta-active #nav{
   border:0 !important;
 }
 
-/* Başlık ile ilk ürün arasında eşit küçük boşluk */
+/* Kritik nokta:
+   İlk ürün başlığın ALTINDA başlar; ayrı krem bant ürünün üzerine uzanmaz. */
 .clean-pasta-page-2 .clean-pasta-body-wrap,
 .clean-pasta-page-3 .clean-pasta-body-wrap{
-  margin-top:4px !important;
-  padding-top:0 !important;
+  display:block !important;
+  position:relative !important;
+  margin:0 !important;
+  padding:0 !important;
+  clear:both !important;
+  background:transparent !important;
+}
+
+/* Görselin kendisinde üstten fazladan kayma/negatif bindirme olmasın */
+.clean-pasta-page-2 .clean-pasta-body,
+.clean-pasta-page-3 .clean-pasta-body{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:none !important;
+  position:static !important;
+}
+
+/* Başlık ile ilk ürün arasında referanstaki gibi nefes payı */
+.clean-pasta-page-2 .clean-pasta-title + .clean-pasta-body-wrap,
+.clean-pasta-page-3 .clean-pasta-title + .clean-pasta-body-wrap{
+  margin-top:10px !important;
 }
 
 @media(min-width:700px){
   .clean-pasta-page-2 .clean-pasta-title-text,
   .clean-pasta-page-3 .clean-pasta-title-text{
-    font-size:54px !important;
+    font-size:56px !important;
   }
 }
 </style></head>
