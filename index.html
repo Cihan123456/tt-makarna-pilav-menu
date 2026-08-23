@@ -543,7 +543,7 @@ body.salad-approved-active #nav{
 }
 </style><style id="final-simple-navigation">
 /* =========================================================
-   TÜM MENÜ SAYFALARINDA SADE SAĞ-SOL OK NAVİGASYONU
+   TÜM MENÜ SAYFALARINDA SADE, KÜÇÜK SAĞ-SOL OKLAR
    ========================================================= */
 
 .page{
@@ -560,7 +560,7 @@ body.salad-approved-active #nav{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 14px calc(14px + env(safe-area-inset-bottom)) !important;
+  padding:0 18px calc(16px + env(safe-area-inset-bottom)) !important;
   background:transparent !important;
   border:0 !important;
   pointer-events:none;
@@ -568,26 +568,34 @@ body.salad-approved-active #nav{
 
 .simple-nav .simple-arrow{
   pointer-events:auto;
-  width:52px;
-  height:52px;
-  border-radius:50%;
-  border:2px solid rgba(25,20,16,.85);
-  background:rgba(255,250,242,.94);
-  color:#17130f;
-  font-size:32px;
-  line-height:44px;
-  font-weight:700;
-  box-shadow:0 4px 16px rgba(0,0,0,.18);
+  width:auto !important;
+  height:auto !important;
+  min-width:0 !important;
+  min-height:0 !important;
+
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+
+  color:#17130f !important;
+  font-size:34px !important;
+  line-height:1 !important;
+  font-weight:500 !important;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:0;
+
+  padding:4px 6px !important;
+  margin:0 !important;
   cursor:pointer;
-  backdrop-filter:blur(3px);
+  text-shadow:0 1px 2px rgba(255,255,255,.75);
 }
 
 .simple-nav .simple-arrow:active{
-  transform:scale(.95);
+  transform:scale(.92);
 }
 
 .simple-nav .simple-arrow:disabled{
@@ -598,7 +606,7 @@ body.salad-approved-active #nav{
   display:none !important;
 }
 
-/* Eski sayfa özel kuralları artık ortak okları gizleyemez */
+/* Sayfa özel kuralları ortak okları gizleyemez */
 body.clean-pasta-active #nav,
 body.pilav-approved-active #nav,
 body.salad-approved-active #nav,
@@ -606,12 +614,21 @@ body.contact-final-active #nav{
   display:flex !important;
 }
 
-/* Eski gömülü footer hotspotları artık yok */
+/* Eski gömülü footer hotspotları yok */
 .clean-pasta-hotspot,
 .pilav-hotspot,
 .salad-hotspot,
 .contact-hotspot{
   display:none !important;
+}
+
+@media(max-width:700px){
+  .simple-nav{
+    padding:0 16px calc(14px + env(safe-area-inset-bottom)) !important;
+  }
+  .simple-nav .simple-arrow{
+    font-size:30px !important;
+  }
 }
 
 @media(min-width:700px){
